@@ -1,0 +1,32 @@
+#foto1
+{
+    width: 50%;
+}
+
+.editarimg
+{
+    width: 100%;
+}
+
+.resetheight
+{
+    min-height: 70px;
+    margin-bottom: 50px;
+}
+
+.aff > div > h2
+{
+    margin-top: 100px;
+    margin-bottom: 50px ;
+}
+
+.big
+{
+    font-size: 100px;
+    color: #e41eeb;
+}
+
+.corletra
+{
+    color: black;
+}

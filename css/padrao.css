@@ -1,0 +1,288 @@
+@font-face
+{
+    font-family: "Lovely"; /* Nome da fonte */
+    src: url("../fontes/lovely/Lovely.ttf") format("ttf"); /* Inclusao do arquivo 'dll' da fonte */
+}
+
+/* #region "Resetando a minha página"*/
+*
+{
+    color: whitesmoke;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/*#endregion*/ 
+
+h1
+{
+    font-family: Lovely;
+}
+
+aside /* barra lateral */
+{
+    width                  : 20%;
+    min-height             : 100%;
+    margin                 : 0;
+    float                  : left;
+    background-color       : #9400d3; /*cor do menu*/
+    position               : fixed; /* não se move com a tela*/
+}
+
+aside > label /* caractere "menuzinho" */
+{
+    display: none; /*exibição : não exibir*/
+}
+
+aside > figure /* área da foto */
+{
+    width                  : 100% ;
+    height                 : 250px;
+    margin-bottom          : 0.3%;
+    float                  : top;
+}
+
+aside > figure > img /* minha foto */
+{
+   width                    : 72% ;
+   border-radius            :50% ; 
+   margin-top               : 10px;
+}
+
+aside > nav /* área de navegação */
+{
+   float                    : bottom;
+   width                    : 100%; 
+}
+
+aside > nav > ul /* área da lista  de navegação */
+{
+    width                   : 100%;
+    list-style              : none;
+}
+
+aside > nav > ul > a /* área de cada item da lista*/
+{
+    width                   : 100%;
+    height                  : 25px;
+    font-size               : 20px;
+    padding-top             : 10px;
+    padding-bottom          : 15px;
+    text-decoration         : none;
+}
+
+aside > nav > ul > a:hover > li /* quando algo flutuar sobre a lista, linha branca */
+{
+   background-color        : whitesmoke; 
+   cursor: pointer;
+}
+
+aside > nav > ul > a > li  /* palavras ficarão brancas */
+{
+    width                   : 100%;
+    margin-left             : 5%;
+    cursor                  : pointer;
+    padding                 : 10px 10px; 
+    color: whitesmoke;    
+}
+
+aside > nav > ul > a:hover li 
+{
+    width                   : 100%;
+    padding                 : 10px 10px;
+    text-decoration         : none; 
+    color: #9400d3;
+}
+
+#MeuNome
+{
+    display: none;
+    font-family: Lovely;  
+    font-size: 23px;
+}
+
+main /* área principal da page*/
+{
+    width                  : 80%;
+    margin-left            : 20%;
+    padding                : 5px;
+    float                  : right;
+    position               : relative;
+    background-color: black;
+}
+
+article
+{
+    margin-bottom: 100px;
+    min-height: 200px;
+    max-height: 700px;
+}
+
+header
+{
+    margin-bottom: 70px;
+}
+
+.linha /* classe genérica para linhas */
+{
+    max-height: 700px;
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 96%;
+    clear: both; /*limpe ambos os lados/ nada flutuando ao redor */
+    padding-top: 1%;
+    border-radius: 2px;
+    min-height: 250px;
+}
+
+
+.col4
+{
+    float: left;
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 31.33%;
+}
+
+.col6
+{
+    float: left;
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 48%;
+}
+
+.col12 /* classe genérica para coluna */
+{
+    float: left;
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 98%;
+}
+
+@media only screen and (max-width: 900px)
+{
+    .col4
+    {
+        float: left;
+        margin-left: 1%;
+        margin-right: 1%;
+        width: 98%;
+    }
+
+}
+
+@media only screen and (max-width: 900px) /* quando chegar na largura max de 900px, aplicar*/
+{
+    aside /* barra horizontal */
+    {
+        width                  : 100%;
+        height                 : 70px;
+        min-height             : 0;
+        margin                 : 0;
+        float                  : top;
+        background-color       : #9400d3; /*cor do menu*/
+        position               : fixed; /* não se move com a tela*/
+    }
+
+    aside > label /* pedaço de texto em destaque (negrito)*/
+    {
+        display: block; /*exibição : fixar na tela*/
+        margin-right: 10px;
+        width: 10%;
+        font-size: 60px;
+        float: right;
+        color: white; /* propriedade para cor de letra e caractere */
+        text-align: center;
+        font-family: Arial;
+    }
+
+    #MeuNome
+    {
+        display: block;
+        width: 70%;    
+        text-align: center;
+        padding-top: 26px;
+        color: white;
+    }
+
+    aside > figure
+    {
+        width                  : 20% ;
+        height                 : 60px;
+        float                  : left;
+        margin-left: 10px;
+        background-color: transparent;
+    }
+
+    aside > figure > img
+    {
+        width                    : 60px ; 
+        margin-top               : 3px;
+    }
+   
+    main
+    {
+        width                  : 100%;
+        margin-left            : 20%;
+        padding                : 2%;
+        position               : inherit; /* ocupar o espaço que sobrou*/
+        min-height             : 0;
+        margin-top             : 70px;
+
+    }
+    aside > nav 
+    {
+        display: none;
+    }
+
+    aside #menuzinho:checked ~ nav /* ~: ignore parentesco e vá direto na tag */
+    {
+        display: block;
+    }
+
+    aside > nav > ul
+    {
+        width: 100%;
+        margin-top: 25px;
+        list-style: none; /* lista sem pontinhos */
+        float: top;
+        background-color: #9400d3;
+    }
+    
+    aside > nav > ul > li
+    {
+        width: 100%;
+        height: 25px;
+        padding-top: 10px;
+    }
+    /* hover tem que colar na li */
+    aside > nav > ul > li:hover /* qdo algo flutuar sobre cada item da lista, fique branco */
+    {
+        background-color        : whitesmoke;
+    }
+
+    aside > nav > ul > li > a /* palavras ficarão brancas */
+    {
+        width                   : 100%;
+        margin-left             : 5%;
+        cursor                  : pointer;
+        padding                 : 10px 10px;
+        text-decoration         : none; 
+        color: whitesmoke;
+    }
+
+    aside > nav > ul > li > a:hover
+    {
+        color: #9400d3;
+    }
+
+
+}
+
+#menuzinho
+{
+    display: none;
+}
+
